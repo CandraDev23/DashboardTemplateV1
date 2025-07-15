@@ -23,14 +23,30 @@ Welcome to **Canwave Dashboard**, a responsive and modern sales dashboard web ap
 ```bash
 .
 ├── assets/
-│   ├── css/               # Styling (reset, main, responsive)
-│   ├── images/            # Logo and UI assets
-│   └── js/                # Layout JS scripts
-├── lib/
-│   ├── chartJs/           # Chart.js and plugins
+│   ├── css/               # Custom styles (reset.css, style.css, responsive.css)
+│   ├── images/            # Logo, background, and image assets
+│   └── js/                # Layout scripts (e.g., layout.js)
+│
+├── lib/                   # External libraries
+│   ├── chartJs/           # Chart.js & chartGeo
 │   ├── dataTables/        # DataTables library
+│   ├── html2Canvas/       # html2canvas (screenshot PNG)
 │   └── jQuery/            # jQuery 3.7.1
-├── public/                # Favicon and static assets
-├── router.js              # SPA route handler
-├── index.html             # Main HTML entry
+│
+├── page/                  # JavaScript modules for each route/page
+│   ├── account.js
+│   ├── customers.js
+│   ├── dashboard.js
+│   ├── orders.js
+│   ├── products.js
+│   ├── reports.js
+│   └── settings.js
+│
+├── public/                # Public assets
+│   ├── favico.ico         # Favicon
+│   └── cover.html         # Optional landing or splash page
+│
+├── index.html             # Main HTML entry (SPA container)
+├── router.js              # JavaScript router for SPA navigation
+├── LICENSE                # License file
 └── README.md              # Project documentation
