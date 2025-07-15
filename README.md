@@ -1,4 +1,4 @@
-# 📊 Canwave Sales Dashboard
+# 📊 Canwave Sales Dashboard (Dashboard Template made by Me)
 
 Welcome to **Canwave Dashboard**, a responsive and modern sales dashboard web app built with vanilla HTML, CSS, JavaScript, and several open-source libraries. This project is designed to help businesses **monitor sales**, **track products**, and **analyze reports** with a clean UI and a powerful user experience.
 
