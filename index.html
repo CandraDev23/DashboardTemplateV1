@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard App</title>
+    <link rel="shortcut icon" href="./public/favico.ico" type="image/x-icon">
+    <!-- GoogleFont Manrope -->
+    <link href="https://fonts.googleapis.com/css2?&family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
+    <!-- FontAwesome v5 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <!-- DataTables -->
+    <link rel="stylesheet" href="./lib/dataTables/datatables.min.css">
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <!-- Custom Styling -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+  </head>
+  <body>
+    <div id="app" class="dashboard-layout">
+      <div class="cover-app">
+        <div>
+          <h1>Welcome Back! <span>Here's Your Sales Overview</span></h1>
+          <p>Track your performance, monitor revenue, and stay on top of your business.</p>
+          <a href="#/dashboard" class="get-started">
+            Get Started
+          </a>
+        </div>
+      </div>
+      <!-- Loader -->
+      <div class="loader-wrapper">
+        <div class="loader"></div> 
+      </div>
+      <!-- SIDEBAR DESKTOP -->
+<script>
+  // Check if sidebar is collapsed or not, get from localStorage
+  (function() {
+    const isCollapsed = localStorage.getItem("sidebar-collapsed") === "true";
+    document.write(`
+      <aside class="sidebar ${isCollapsed ? 'sidebar-collapse' : 'sidebar-expand'}">
+    `);
+  })();
+</script>
+  <div class="sidebar-header">
+    <a href="#/dashboard" class="logo-expand" data-route="/dashboard" data-link>
+      <img src="./assets/images/logo.png" alt="logo" />
+    </a>
+    <a href="#/dashboard" class="logo-expand dark-theme" data-route="/dashboard" data-link>
+      <img src="./assets/images/logo-dark.png" alt="logo" />
+    </a>
+    <a href="#/dashboard" class="logo-collapse" data-route="/dashboard" data-link>
+      <img src="./assets/images/logo-mini.png" alt="logo-mini" />
+    </a>
+    <button class="toggle-sidebar">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+  </div>
+  <div class="sidebar-main">
+    <div class="sidebar-menu">
+      <label class="label-expand">Menu</label>
+      <label class="label-collapse">M</label>
+      <a class="nav-link" href="#/dashboard" title="Dashboard" data-route="/dashboard" data-link>
+        <i class="fas fa-tachometer-alt"></i>
+        <span class="menu-text">Dashboard</span>
+      </a>
+      <a class="nav-link" href="#/products" title="Products" data-route="/products" data-link>
+        <i class="fas fa-boxes"></i>
+        <span class="menu-text">Products</span>
+      </a>
+      <a class="nav-link" href="#/customers" title="Customers" data-route="/customers" data-link>
+        <i class="fas fa-users"></i>
+        <span class="menu-text">Users</span>
+      </a>
+      <a class="nav-link" href="#/orders" title="Orders" data-route="/orders" data-link>
+        <i class="fas fa-shopping-cart"></i>
+        <span class="menu-text">Orders</span>
+      </a>
+      <a class="nav-link" href="#/reports" title="Reports" data-route="/reports" data-link>
+        <i class="fas fa-chart-line"></i>
+        <span class="menu-text">Reports</span>
+      </a>
+    </div>
+    <div class="sidebar-account">
+      <label class="label-expand">Account</label>
+      <label class="label-collapse">A</label>
+      <a class="nav-link" href="#/account" title="Account" data-route="/account" data-link>
+        <i class="fas fa-user"></i>
+        <span class="menu-text">Account</span>
+      </a>
+      <a class="nav-link" href="#/settings" title="Settings" data-route="/settings" data-link>
+        <i class="fas fa-cog"></i>
+        <span class="menu-text">Settings</span>
+      </a>
+    </div>
+  </div>
+</aside>
+
+<!-- SIDEBAR TABLET AND MOBILE -->
+<script>
+  // Check if sidebar is collapsed or not, get from localStorage
+  (function() {
+    const isActive = localStorage.getItem("active") === "true";
+    document.write(`
+      <aside class="sidebar-mobile ${isActive ? 'active' : ''}">
+    `);
+  })();
+</script>
+  <div class="sidebar-header">
+    <a href="#/dashboard" class="logo-mobile" data-route="/dashboard" data-link>
+      <img src="./assets/images/logo.png" alt="logo" />
+    </a>
+    <a href="#/dashboard" class="logo-mobile dark-theme" data-route="/dashboard" data-link>
+      <img src="./assets/images/logo-dark.png" alt="logo" />
+    </a>
+    <button class="toggle-sidebar-mobile">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+  </div>
+  <div class="sidebar-main">
+    <div class="sidebar-menu">
+      <label class="label-expand">Menu</label>
+      <label class="label-collapse">M</label>
+      <a class="nav-link" href="#/dashboard" title="Dashboard" data-route="/dashboard" data-link>
+        <i class="fas fa-tachometer-alt"></i>
+        <span class="menu-text">Dashboard</span>
+      </a>
+      <a class="nav-link" href="#/products" title="Products" data-route="/products" data-link>
+        <i class="fas fa-boxes"></i>
+        <span class="menu-text">Products</span>
+      </a>
+      <a class="nav-link" href="#/customers" title="Customers" data-route="/customers" data-link>
+        <i class="fas fa-users"></i>
+        <span class="menu-text">Users</span>
+      </a>
+      <a class="nav-link" href="#/orders" title="Orders" data-route="/orders" data-link>
+        <i class="fas fa-shopping-cart"></i>
+        <span class="menu-text">Orders</span>
+      </a>
+      <a class="nav-link" href="#/reports" title="Reports" data-route="/reports" data-link>
+        <i class="fas fa-chart-line"></i>
+        <span class="menu-text">Reports</span>
+      </a>
+    </div>
+    <div class="sidebar-account">
+      <label class="label-expand">Account</label>
+      <label class="label-collapse">A</label>
+      <a class="nav-link" href="#/account" title="Account" data-route="/account" data-link>
+        <i class="fas fa-user"></i>
+        <span class="menu-text">Account</span>
+      </a>
+      <a class="nav-link" href="#/settings" title="Settings" data-route="/settings" data-link>
+        <i class="fas fa-cog"></i>
+        <span class="menu-text">Settings</span>
+      </a>
+    </div>
+  </div>
+</aside>
+      <nav id="navbar">
+        <button class="toggle-sidebar-mobile hide">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+      </nav>
+      <main>
+          <!-- CONTENT HERE -->
+      </main>
+      <footer>
+        <p>&copy; 2025 Canwave Dashboard. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <!-- jQuery v3.7.1 -->
+    <script src="./lib/jQuery/jquery-3.7.1.min.js"></script>
+    <!-- DataTables v2.3.2 -->
+    <script src="./lib/dataTables/datatables.min.js"></script>
+    <!-- html2canvas (screenshot PNG) -->
+    <script src="./lib/html2Canvas/html2canvas.min.js"></script>
+    <!-- chartJs v4.5.0 -->
+    <script src="./lib/chartJs/chart.js"></script>
+    <!-- Chart.js Geo Plugin (choropleth, bubbleMap, dll.) -->
+    <script src="./lib/chartJs/chartGeo.js"></script>
+    <!-- Router JS -->
+    <script type="module" src="./router.js"></script>
+    <!-- Layout Script -->
+    <script src="./assets/js/layout.js"></script>
+    
+  </body>
+</html>

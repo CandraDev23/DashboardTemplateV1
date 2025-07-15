@@ -1,0 +1,58 @@
+@media screen and (max-width: 991.98px) {
+  .customers-grid {
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+  }
+  .sidebar {
+    display: none;
+  }
+  .sidebar-mobile {
+    display: flex;
+  }
+  #navbar {
+  display: block;
+}
+.sidebar-mobile ~ main,
+.sidebar-mobile ~ footer {
+  margin-left: 0!important;
+}
+}
+
+@media screen and (max-width: 767.98px) {
+  .customers-grid {
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+  }
+  #salesByProductCategoryAndCountries {
+    flex-direction: column;
+  }
+  .chart-wrapper.product-category-chart canvas {
+    height: 320px !important;
+  }
+  .chart-wrapper.country-chart {
+    margin: 0;
+  }
+  .chart-wrapper.country-chart canvas {
+    height: 320px !important;
+  }
+  .chart-wrapper.sales-overtime canvas,
+  .chart-wrapper.product-sales-chart canvas {
+  height: 280px!important;
+  }
+}
+
+@media screen and (max-width: 576.98px) {
+  .chart-wrapper.country-chart canvas {
+    height: 220px !important;
+  }
+  .chart-wrapper.sales-overtime canvas,
+  .chart-wrapper.product-sales-chart canvas {
+  height: 220px!important;
+}
+
+  .content-header {
+    justify-content: center;
+    align-items: center!important;
+    text-align: center;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
