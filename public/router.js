@@ -27,32 +27,33 @@ const routes = {
   "/settings": settingsPage,
 };
 
-// Always use push state routing for both development and production
+// Always use hash routing for both development and production
+const useHashRouting = true;
+
 function navigateTo(url) {
-  history.pushState(null, null, url);
-  router();
+  window.location.hash = url;
 }
 
 const getCurrentPath = () => {
-  return window.location.pathname || '/dashboard';
+  return window.location.hash.slice(1) || '/dashboard';
 };
 
 const setActiveLink = (path) => {
   $(".nav-link").each(function () {
     const $link = $(this);
-    const linkPath = $link.attr("data-route");
-    const isActive = linkPath === path;
+    const linkPath = $link.attr("href");
+    const isActive = linkPath === '#' + path;
     
     $link.toggleClass("active", isActive);
   });
 };
 
 const initializeLinks = () => {
-  // Set href attributes based on data-route for push state routing
+  // Ensure all navigation links have proper hash hrefs
   $('[data-route][data-link]').each(function() {
     const $link = $(this);
     const route = $link.attr('data-route');
-    $link.attr('href', route);
+    $link.attr('href', '#' + route);
   });
 };
 
@@ -88,24 +89,24 @@ const router = async () => {
   });
 };
 
-// Event listeners for push state routing
+// Event listeners for hash routing
 $(document).on("click", "[data-link]", function(e) {
   e.preventDefault();
   
-  const targetUrl = this.getAttribute("data-route");
+  const targetUrl = this.getAttribute("href").slice(1);
   navigateTo(targetUrl);
 });
 
-// Handle browser navigation (back/forward buttons)
-$(window).on("popstate", router);
+// Handle browser navigation (hash changes)
+$(window).on("hashchange", router);
 
 // Initialize
 $(document).ready(() => {
   initializeLinks();
   
-  // Set default route if on root path
-  if (window.location.pathname === '/') {
-    history.replaceState(null, null, '/dashboard');
+  // Set default hash if none exists
+  if (!window.location.hash) {
+    window.location.hash = '/dashboard';
   }
   
   router();
