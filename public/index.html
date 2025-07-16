@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard App</title>
-    <link rel="shortcut icon" href="./public/favico.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./favico/favico.ico" type="image/x-icon">
     <!-- GoogleFont Manrope -->
     <link href="https://fonts.googleapis.com/css2?&family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
     <!-- FontAwesome v5 -->
@@ -24,7 +24,7 @@
         <div>
           <h1>Welcome Back! <span>Here's Your Sales Overview</span></h1>
           <p>Track your performance, monitor revenue, and stay on top of your business.</p>
-          <a href="#/dashboard" class="get-started">
+          <a href="/dashboard" class="get-started" data-route="/dashboard" data-link>
             Get Started
           </a>
         </div>
@@ -44,13 +44,13 @@
   })();
 </script>
   <div class="sidebar-header">
-    <a href="#/dashboard" class="logo-expand" data-route="/dashboard" data-link>
+    <a href="/dashboard" class="logo-expand" data-route="/dashboard" data-link>
       <img src="./assets/images/logo.png" alt="logo" />
     </a>
-    <a href="#/dashboard" class="logo-expand dark-theme" data-route="/dashboard" data-link>
+    <a href="/dashboard" class="logo-expand dark-theme" data-route="/dashboard" data-link>
       <img src="./assets/images/logo-dark.png" alt="logo" />
     </a>
-    <a href="#/dashboard" class="logo-collapse" data-route="/dashboard" data-link>
+    <a href="/dashboard" class="logo-collapse" data-route="/dashboard" data-link>
       <img src="./assets/images/logo-mini.png" alt="logo-mini" />
     </a>
     <button class="toggle-sidebar">
@@ -61,23 +61,23 @@
     <div class="sidebar-menu">
       <label class="label-expand">Menu</label>
       <label class="label-collapse">M</label>
-      <a class="nav-link" href="#/dashboard" title="Dashboard" data-route="/dashboard" data-link>
+      <a class="nav-link" href="/dashboard" title="Dashboard" data-route="/dashboard" data-link>
         <i class="fas fa-tachometer-alt"></i>
         <span class="menu-text">Dashboard</span>
       </a>
-      <a class="nav-link" href="#/products" title="Products" data-route="/products" data-link>
+      <a class="nav-link" href="/products" title="Products" data-route="/products" data-link>
         <i class="fas fa-boxes"></i>
         <span class="menu-text">Products</span>
       </a>
-      <a class="nav-link" href="#/customers" title="Customers" data-route="/customers" data-link>
+      <a class="nav-link" href="/customers" title="Customers" data-route="/customers" data-link>
         <i class="fas fa-users"></i>
         <span class="menu-text">Users</span>
       </a>
-      <a class="nav-link" href="#/orders" title="Orders" data-route="/orders" data-link>
+      <a class="nav-link" href="/orders" title="Orders" data-route="/orders" data-link>
         <i class="fas fa-shopping-cart"></i>
         <span class="menu-text">Orders</span>
       </a>
-      <a class="nav-link" href="#/reports" title="Reports" data-route="/reports" data-link>
+      <a class="nav-link" href="/reports" title="Reports" data-route="/reports" data-link>
         <i class="fas fa-chart-line"></i>
         <span class="menu-text">Reports</span>
       </a>
@@ -85,11 +85,11 @@
     <div class="sidebar-account">
       <label class="label-expand">Account</label>
       <label class="label-collapse">A</label>
-      <a class="nav-link" href="#/account" title="Account" data-route="/account" data-link>
+      <a class="nav-link" href="/account" title="Account" data-route="/account" data-link>
         <i class="fas fa-user"></i>
         <span class="menu-text">Account</span>
       </a>
-      <a class="nav-link" href="#/settings" title="Settings" data-route="/settings" data-link>
+      <a class="nav-link" href="/settings" title="Settings" data-route="/settings" data-link>
         <i class="fas fa-cog"></i>
         <span class="menu-text">Settings</span>
       </a>
@@ -108,10 +108,10 @@
   })();
 </script>
   <div class="sidebar-header">
-    <a href="#/dashboard" class="logo-mobile" data-route="/dashboard" data-link>
+    <a href="/dashboard" class="logo-mobile" data-route="/dashboard" data-link>
       <img src="./assets/images/logo.png" alt="logo" />
     </a>
-    <a href="#/dashboard" class="logo-mobile dark-theme" data-route="/dashboard" data-link>
+    <a href="/dashboard" class="logo-mobile dark-theme" data-route="/dashboard" data-link>
       <img src="./assets/images/logo-dark.png" alt="logo" />
     </a>
     <button class="toggle-sidebar-mobile">
@@ -122,23 +122,23 @@
     <div class="sidebar-menu">
       <label class="label-expand">Menu</label>
       <label class="label-collapse">M</label>
-      <a class="nav-link" href="#/dashboard" title="Dashboard" data-route="/dashboard" data-link>
+      <a class="nav-link" href="/dashboard" title="Dashboard" data-route="/dashboard" data-link>
         <i class="fas fa-tachometer-alt"></i>
         <span class="menu-text">Dashboard</span>
       </a>
-      <a class="nav-link" href="#/products" title="Products" data-route="/products" data-link>
+      <a class="nav-link" href="/products" title="Products" data-route="/products" data-link>
         <i class="fas fa-boxes"></i>
         <span class="menu-text">Products</span>
       </a>
-      <a class="nav-link" href="#/customers" title="Customers" data-route="/customers" data-link>
+      <a class="nav-link" href="/customers" title="Customers" data-route="/customers" data-link>
         <i class="fas fa-users"></i>
         <span class="menu-text">Users</span>
       </a>
-      <a class="nav-link" href="#/orders" title="Orders" data-route="/orders" data-link>
+      <a class="nav-link" href="/orders" title="Orders" data-route="/orders" data-link>
         <i class="fas fa-shopping-cart"></i>
         <span class="menu-text">Orders</span>
       </a>
-      <a class="nav-link" href="#/reports" title="Reports" data-route="/reports" data-link>
+      <a class="nav-link" href="/reports" title="Reports" data-route="/reports" data-link>
         <i class="fas fa-chart-line"></i>
         <span class="menu-text">Reports</span>
       </a>
@@ -146,11 +146,11 @@
     <div class="sidebar-account">
       <label class="label-expand">Account</label>
       <label class="label-collapse">A</label>
-      <a class="nav-link" href="#/account" title="Account" data-route="/account" data-link>
+      <a class="nav-link" href="/account" title="Account" data-route="/account" data-link>
         <i class="fas fa-user"></i>
         <span class="menu-text">Account</span>
       </a>
-      <a class="nav-link" href="#/settings" title="Settings" data-route="/settings" data-link>
+      <a class="nav-link" href="/settings" title="Settings" data-route="/settings" data-link>
         <i class="fas fa-cog"></i>
         <span class="menu-text">Settings</span>
       </a>
