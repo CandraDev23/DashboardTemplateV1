@@ -88,7 +88,7 @@ body {
   font-size: 1em;
 }
 
-.cover-app a {
+.cover-app button {
   text-decoration: none;
   display: inline-block;
   background-color: var(--color-blue);
@@ -102,32 +102,32 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
-.cover-app a:hover {
+.cover-app button:hover {
   transform: translateY(-16px);
   box-shadow: rgba(115, 144, 246, 0.4) 0px 5px, rgba(115, 144, 246, 0.3) 0px 10px, rgba(115, 144, 246, 0.2) 0px 15px, rgba(115, 144, 246, 0.1) 0px 20px, rgba(115, 144, 246, 0.05) 0px 25px;
   background-color: var(--color-blue-hover);
   /* transform: scale(1.05); */
 }
 
-.cover-app a:active {
+.cover-app button:active {
   border: none;
   transform: scale(1);
   box-shadow: none;
 }
 
-.cover-app a i {
+.cover-app button i {
   margin-left: 8px;
 }
 
-body.dark-theme .cover-app a {
+body.dark-theme .cover-app button {
   color: var(--color-black);
 }
 
-body.dark-theme .cover-app a:hover {
+body.dark-theme .cover-app button:hover {
   outline: 2px solid var(--color-black);
 }
 
-body.dark-theme .cover-app a:active {
+body.dark-theme .cover-app button:active {
     box-shadow: rgba(255, 255, 255, 0.1) 0px 10px 50px;
 }
 
